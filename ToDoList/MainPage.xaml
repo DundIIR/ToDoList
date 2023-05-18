@@ -43,7 +43,7 @@
                 <DataTemplate x:DataType="toDoList:Item">
                     <Grid ColumnDefinitions="35, *, 50" RowDefinitions="40" Padding="0,5" ColumnSpacing="10">
 
-                        <CheckBox Color="#60b1fc" x:Name="Check"/>
+                        <CheckBox Color="#60b1fc" x:Name="Check" IsChecked="{Binding Checked}"/>
 
                         <Frame  Grid.Column="1" Padding="4">
                             <Frame Padding="10, 4"  BackgroundColor="White" BorderColor="Transparent" CornerRadius="7">
@@ -77,7 +77,7 @@
                             TextColor="White"
                             Command="{Binding Source={RelativeSource AncestorType={x:Type CollectionView}}, Path=BindingContext.DeleteCommand}"
                             CommandParameter="{Binding .}"/>
-                        <!--Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodel:MainViewModel}}, Path=DeleteCommand}" 185ABD-->
+                        
 
                     </Grid>
                 </DataTemplate>

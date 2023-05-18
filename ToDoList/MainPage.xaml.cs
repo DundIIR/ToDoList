@@ -65,6 +65,19 @@ public class Item : BaseViewModel
             OnPropertyChanged(nameof(Color));
         }
     }
+
+    private bool _checked;
+
+    public bool Checked
+    {
+        get => _checked;
+        set
+        {
+            if (_checked == value) return;
+            _checked = value;
+            OnPropertyChanged(nameof(Checked));
+        }
+    }
 }
 
 class MainViewModel : BaseViewModel
